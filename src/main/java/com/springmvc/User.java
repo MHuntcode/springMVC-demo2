@@ -13,7 +13,7 @@ public class User {
     }
   @RequestMapping(value = "/user/{id}",method = RequestMethod.GET)
     public String getUSerById(){
-      System.out.println("更是的骄傲");
+
       return  "success";
   }
 
