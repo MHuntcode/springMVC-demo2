@@ -17,9 +17,5 @@ public class User {
       return  "success";
   }
 
-  @RequestMapping(value = "/user",method = RequestMethod.POST)
-    public  String insertUSer(String username,String password){
-      System.out.println("添加用户信息"+username+","+password);
-      return  "success";
-  }
+
 }
