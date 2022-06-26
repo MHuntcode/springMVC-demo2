@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function fun1() {
+            document.getElementById("txt1");
+            var obj=document.getElementById("txt1");
+            alert(obj.value);
+        }
+
+        function  getObj(id) {
+            var obj=document.getElementById(id);
+            return obj;
+
+        }
+    </script>
+</head>
+<body>
+   <input type="text" id="txt1" value="我是文本框架"/><br/>
+   <input type="button" value="单击" onclick="fun1()"/>
+</body>
+</html>

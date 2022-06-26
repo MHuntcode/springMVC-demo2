@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        div{
+            background: grey;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+     $(function () {
+         //页面dom对象加载后执行
+         $("#btn1").click(function () {
+             //所有可用文本框
+             var obj=$(":text:enabled");
+             obj.val("hello");
+
+         })
+
+         $(function () {
+             $("#btn2").click(function () {
+                 //获取所有复选框
+                 var obj=$(":checkbox:checked");
+                 for (var i=0;i<obj.length;i++){
+                     console.log(  obj[i].value());
+                 }
+             })
+         })
+
+         $(function () {
+           $("#btn3").click(function () {
+                var obj=$("select >option:selected");
+                // console.log(obj.val());
+               alert(obj.val());
+           })
+         })
+     })
+    </script>
+</head>
+<body>
+ <input type="text" value="文本1"/><br/>
+ <input type="text" value="文本2" disabled="true"/><br/>
+ <input type="text" value="文本3"/><br/>
+ <input type="text" value="文本3" disabled/><br/>
+ <br/>
+ <br/>
+ <input type="checkbox" value="游泳"/><br/>
+ <input type="checkbox" value="健身" checked="true"/><br/>
+ <input type="checkbox" value="电子游戏" checked /><br/>
+ <br/>
+ <br/>
+ <select id="lang">
+     <option value="java">java语言</option>
+     <option value="go">go语言</option>
+     <option value="pyhon">pyhon语言</option>
+ </select>
+ <br/>
+ <br/>
+<button id="btn1">所有可用文本框</button>
+<button id="btn2">显示</button>
+<button id="btn3">选中下拉列表</button>
+</body>
+</html>

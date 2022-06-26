@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+       function test(){
+           //使用jquery语法来获取jquery对象
+           var obj=$("#t1");
+           //从数值中获取成员，成员是dom对象
+            var dom=obj[0];
+            //调用dom的属性或者函数
+            //alert(dom.value());
+            var num=dom.value;
+            dom.value=num*num;
+       }
+    </script>
+</head>
+<body>
+  <input type="button" id="btn" value="计算平方值" onclick="test()"/>
+  <input type="text"  id="t1" value="请输入整数"/>
+</body>
+</html>

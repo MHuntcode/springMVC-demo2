@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        div{
+             width: 120px;
+             height: 120px;
+             background: grey;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        function  f1() {
+         var obj=$("#one");
+         obj.css("background","red");
+
+        }
+        function f2() {
+            var $obj=$(".two");
+                $obj.css("background","blue");
+        }
+        function f3() {
+            var $obj=$("div");
+            $obj.css("background","black");
+        }
+        function  f4() {
+            var obj=$("*");
+            obj.css("background","yellow");
+        }
+        function f5() {
+            var $obj=$("#one,.two,span");
+            $obj.css("background","green");
+
+        }
+    </script>
+</head>
+<body>
+  <div id="one">我是id=one的dic</div>
+  <br/>
+  <div class="two">我是id=two的div</div>
+  <br/>
+ <div class="two">没有id 和 class</div>
+ <br/>
+ <span>我是span</span>
+<br/>
+<br/>
+<input type="button" value="获取id=one的对象" onclick="f1()"/><br/>
+  <input type="button" value="获取class=two的对象" onclick="f2()"/><br/>
+  <input type="button" value="获取div标签的对象" onclick="f3()"/><br/>
+  <input type="button" value="所有选择器" onclick="f4()"/><br/>
+  <input type="button" value="组合选择器" onclick="f5()"/><br/>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        div{
+            background: grey;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        //绑定事件
+        $(function () {
+            $("#btn").click(function () {
+                alert("button单击了，执行处理函数")
+            })
+
+            //btn1事件
+            $("#btn1").click(function () {
+                var obj=$("div:first");
+                obj.css("background","blue");
+            })
+            //btn2事件
+            $("#btn2").click(function () {
+                //选择最后一个div
+                var obj=$("div:last");
+                obj.css("background","red");
+            })
+
+            //btn3事件
+            $("#btn3").click(function () {
+                var obj=$("div:eq(3)");
+                obj.css("background","yellow");
+
+            })
+            //btn4事件
+            $("#btn4").click(function () {
+                var obj=$("div:lt(3)");
+                obj.css("background","red");
+            })
+            //btn5事件
+            $("#btn5").click(function () {
+                var obj=$("div:gt(3)");
+                obj.css("background","blue");
+            })
+        })
+
+    </script>
+</head>
+<body>
+<div id="one">我是div-0</div>
+<div id="two">我是div-1</div>
+<div>
+    我是div-2
+    <div>我是div-3</div>
+    <div>我是div-4</div>
+</div>
+<div>我是div-5</div>
+<br/>
+<br/>
+<span>我是span</span>
+<br/>
+<br/>
+ <input type="button" id="btn" value="绑定事件"/>
+ <input type="button" id="btn1" value="获取数组中第一个dom对象" />
+ <input type="button" id="btn2" value="获取最后一个dom对象" />
+ <input type="button" id="btn3" value="等于3的dom对象"/>
+ <input type="button" id="btn4" value="小于3的dom对象"/>
+ <input type="button" id="btn5" value="大于3的dom对象"/>
+
+</by>
+</body>
+</html>
