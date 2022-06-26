@@ -11,11 +11,5 @@ public class User {
         System.out.println("查询所有的用户");
         return  "success";
     }
-  @RequestMapping(value = "/user/{id}",method = RequestMethod.GET)
-    public String getUSerById(){
-      System.out.prn("更是的骄傲");
-      return  "success";
-  }
-
 
 }
